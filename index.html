@@ -103,6 +103,7 @@
     .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
     .card { min-height: 350px; padding: 30px; border: 1px solid var(--line); border-radius: 15px; background: rgba(12,25,41,.72); display: flex; flex-direction: column; transition: transform .2s ease, border-color .2s ease; }
     .card:hover { transform: translateY(-4px); border-color: rgba(85,216,255,.42); }
+    .card--wide { grid-column: 1 / -1; min-height: 0; }
     .card .tech-list { margin-top: auto; }
     .card strong, .featured strong { color: #d7e7f5; }
     .project-actions { display: flex; flex-wrap: wrap; gap: 18px; }
@@ -273,6 +274,14 @@
             <div class="project-actions"><a class="project-link" href="https://github.com/Lal3x/climate-lakehouse-azure" target="_blank" rel="noreferrer">Repositório ↗</a><a class="project-link" href="https://github.com/Lal3x/climate-lakehouse-azure/tree/main/docs" target="_blank" rel="noreferrer">Documentação ↗</a></div>
           </article>
 
+          <article class="card card--wide">
+            <div class="cloud">Apache Beam · Processamento de dados</div>
+            <h3>Air Traffic Medallion Pipeline</h3>
+            <p><strong>Problema:</strong> coletar e transformar observações de tráfego aéreo da OpenSky em conjuntos de dados rastreáveis e prontos para análise.</p><p><strong>Decisão:</strong> Apache Beam com DirectRunner, arquitetura Bronze/Silver/Gold, Parquet, registros rejeitados e observabilidade por execução.</p><p><strong>Resultado:</strong> pipeline local reproduzível com testes automatizados, cobertura mínima de 70%, CI/CD, documentação e dashboard Streamlit.</p>
+            <ul class="tech-list"><li>Apache Beam</li><li>Python</li><li>Parquet</li><li>DuckDB</li><li>Streamlit</li><li>Pytest</li><li>MkDocs</li></ul>
+            <div class="project-actions"><a class="project-link" href="https://github.com/Lal3x/air-traffic-medallion-pipeline" target="_blank" rel="noreferrer">Repositório ↗</a><a class="project-link" href="https://lal3x.github.io/air-traffic-medallion-pipeline/" target="_blank" rel="noreferrer">Documentação ↗</a></div>
+          </article>
+
           <h3 class="additional-title">Projetos adicionais</h3>
 
           <article class="card">
@@ -299,12 +308,12 @@
           <h2>Competências profissionais ampliadas pelos projetos.</h2>
         </div>
         <div class="skills">
-          <div class="skill"><strong>Linguagens e processamento</strong><span>Python, SQL, PySpark, Pandas e Spark Structured Streaming.</span></div>
+          <div class="skill"><strong>Linguagens e processamento</strong><span>Python, SQL, PySpark, Pandas, Apache Beam e Spark Structured Streaming.</span></div>
           <div class="skill"><strong>Engenharia de dados</strong><span>ETL/ELT, Kafka, Airflow, dbt, arquitetura medalhão, idempotência, checkpoints e contratos.</span></div>
           <div class="skill"><strong>AWS</strong><span>S3, Glue, Athena, Lambda, Step Functions, EventBridge e SAM/CloudFormation.</span></div>
           <div class="skill"><strong>Azure</strong><span>Data Factory, Databricks, ADLS Gen2, Blob Storage, Delta Lake e Key Vault.</span></div>
           <div class="skill"><strong>Google Cloud</strong><span>BigQuery, Cloud Storage, Cloud Run, Eventarc, Workflows e Cloud Tasks.</span></div>
-          <div class="skill"><strong>Bancos e busca</strong><span>PostgreSQL, SQL Server, Oracle, MongoDB, Elasticsearch e MinIO.</span></div>
+          <div class="skill"><strong>Bancos e busca</strong><span>PostgreSQL, SQL Server, Oracle, MongoDB, Elasticsearch, DuckDB e MinIO.</span></div>
           <div class="skill"><strong>Analytics e Machine Learning</strong><span>Scikit-learn, Isolation Forest, detecção de anomalias, Power BI, Tableau, Grafana e Streamlit.</span></div>
           <div class="skill"><strong>Qualidade e operação</strong><span>Testes automatizados, CI/CD, observabilidade, reconciliação, troubleshooting e documentação.</span></div>
           <div class="skill"><strong>Governança e segurança</strong><span>LGPD, ISO 27001, rastreabilidade, cadeia de custódia, MITRE ATT&amp;CK e análise forense.</span></div>
